@@ -1,232 +1,222 @@
-<!doctype html>
-<html>
-  <head itemscope="itemscope" itemtype="http://smpte.org/standards/documents">
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="module" src="../tooling/smpte.js"></script>
-
-
-    <meta itemprop="pubType" content="ST" />
-    <meta itemprop="pubNumber" content="100" />
-    <meta itemprop="pubPart" content="10" />
-    <meta itemprop="pubState" content="draft" />
-    <meta itemprop="pubStage" content="WD" />
-    <meta itemprop="pubConfidential" content="yes" />
-    <meta itemprop="pubTC" content="XX" />
-    <meta itemprop="pubSuiteTitle" content="HTML Pub" />
-    <meta itemprop="pubDateTime" content="2025-02-26" />
-    <!-- <meta itemprop="pubRevisionOf" content="SMPTE ST XXXX-Y:ZZZZ" /> -->
-
-    <title>Template (Base HTML Repo with Tooling)</title>
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope="itemscope" itemtype="http://smpte.org/standards/documents">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="module" src="../tooling/smpte.js"></script>
+  <meta itemprop="pubType" content="AG" />
+  <meta itemprop="pubNumber" content="06" />
+  <meta itemprop="pubState" content="draft" />
+  <meta itemprop="pubDateTime" content="2025-02-26" />
+  <title>GitHub Operating Guidelines</title>
   </head>
   <body>
 
-    <section id="sec-foreword">
-      <!-- Remove section if this is the first edition of the document -->
-      <p>The following summarizes the changes from the previous edition of this document:</p>
-      <ul>
-        <li>external references are updated to their latest versions;</li>
-        <li>references are updated to their latest versions.</li>
-      </ul>
-    </section>
-
-    <section id="sec-introduction">
-      <!-- Remove section if there is no introduction -->
-      <p>This is the introduction.</p>
-    </section>
 
     <section id="sec-scope">
-      <p>This is the scope.</p>
+      <p>This defines the process for managing SMPTE GitHub repositories for usage with the HTML Workflow as defined by <a href="#bib-ag-26"></a>.</p>
     </section>
-
-   
 
     <section id="sec-normative-references">
       <!-- Remove section if there are no normative references -->
       <ul>
-        <li>
-          <cite id="bib-HTML-5">HTML Standard</cite>, Living Standard.
-          <a>https://html.spec.whatwg.org/multipage/</a></li>
+        <li><cite id="bib-ag-26">SMPTE AG-26</cite>, HTML Pub: Tooling and documentation for HTML documents
+          <a>https://doc.smpte-doc.org/html-pub/main/</a></li>
       </ul>
     </section>
 
     <section id="sec-terms-and-definitions">
-      <!-- Remove UL element if no external definitions -->
-      <ul id="terms-ext-defs">
-        <li><a href="#bib-HTML-5"></a></li>
-      </ul>
-
-      <!-- Remove DL element if no internal definitions -->
       <dl id="terms-int-defs">
-        <dt>Hypertext Markup Language</dt>
-
-        <!-- Remove if no abbreviation -->
-        <dt><abbr>HTML</abbr></dt>
-
-        <!-- Remove if no definition -->
-        <dd>text with markup</dd>
-
-        <!-- Remove if no source is cited -->
-        <dd><a href="#bib-HTML-5"></a></dd>
+        <dt><dfn>issue</dfn></dt>
+        <dd><a>https://docs.github.com/en/issues/tracking-your-work-with-issues</a></dd>
+        <dt><dfn>pull request</dfn></dt>
+        <dt><dfn>PR</dfn></dt>
+        <dd><a>https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests</a></dd>
+        <dt><dfn>approval</dfn></dt>
+        <dd><a>https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request</a></dd>
+    
       </dl>
     </section>
 
-    <section id="sec-sample-clause">
-      <h2>Sample clause</h2>
-
-      <!-- All section elements must have an id attribute -->
-
-      <section id="sec-section-linking">
-        <h3>Referencing clauses</h3>
-
-        <p>This references <a href="#sec-sample-clause"></a>.</p>
+    <section id="sec-document-repo">
+      <h2>Document repository</h2>
+      
+      <section id="sec-repo-use">
+        <h3>Usage</h3>
+        <p>A GitHub repository is primarily intended for:</p>
+        <ul>
+          <li>tracking <a>issues</a> against engineering documents and publishing Public Committee Drafts (PCD);</li>
+          <li>managing engineering documents via the HTML Workflow as defined by <a href="#bib-ag-26"></a>;</li>
+          <li>managing non-prose element(s) of engineering documents that are intended to be made publicly available, including source code, XML, JSON, etc.</li>
+        </ul>
+      
       </section>
+      <section id="sec-private-public">
+        <h3>Private vs public</h3>
+        <p>A repository can either be:</p>
+        <ul>
+          <li><code>public</code>; in which case it is accessible by the public</li>
+          <li><code>private</code>; in which case it is accessible only by SMPTE Standards Community Members</li>
+        </ul>
+        <p>Unless requested by the project group, repositories are created as public repository.</p>
 
-      <section id="sec-normative-linking">
-        <h3>Citing normative references</h3>
+        <p>A public repository should remain public.</p>
 
-        <p>This cites <a href="#bib-HTML-5"></a>.</p>
+        <p>Discussions in public repository are not subject to the SMPTE confidentiality policy.</p>
+
+        <p>A project group may request that a repository be created as private, or made private.</p>
+
+        <p>A repository that is private shall not be made public, unless explicitly approved by the Standards Vice-President as provided by the SMPTE confidentiality policy.</p>
+
+        <p>In the event that a public repository is created when a private repository already exists, the private repository should be archived and <code>-private</code> appended to its name.</p>
+      
       </section>
-
-
-      <section id="sec-elements-linking">
-        <h3>Citing non-prose elements</h3>
-
-        <p>This references <a href="#element-a"></a>.</p>
-
+      <section id="sec-repo-creation">
+        <h3>Creation</h3>
+        <p>A repository is created only on request to sent to <code>githubsteering@smpte.org</code>.</p>
       </section>
+    </section>
 
-      <section id="sec-bibliographic-linking">
-        <h3>Citing bibliographic references</h3>
+    <section id="sec-repo-types">
+      <h2>Repo Types</h2>
+      
+      <section id="sec-repo-main-doc">
+        <h3>Main Document Repo</h3>
 
-        <p>This cites <a href="#bib-iso-directives-part2"></a>.</p>
+        <section id="sec-repo-main-doc-general">
+          <h4>General</h4>
+
+          <p>There is one <i>public</i> repository for all editions and stages of a document. This repo is primarily used for collecting <a>issues</a> from the public.</p>
+
+          <p>The main benefit of this repo is that anyone in the community may make a comment (as an <a>issue</a>) about a document without needing to be a SMPTE participant, as long as they are a GitHub user.</p>
+
+          <p>This repo may change via a <a>PR</a> for publication of a PCD, and back to a basic issue tracking repo via a <a>PR</a> after completion of a PCD. For guidance on this, see <a href="#bib-smpte-ag-22"></a></p>
+        </section>
+        <section id="sec-repo-main-doc-naming">
+          <h4>Naming</h4>
+
+          <p>The syntax for repo naming is:</p>
+
+<pre>
+("rp" | "st" | "eg")&lt;document root number&gt; "-" &lt;document part&gt;
+</pre>
+
+          <p class="example">The repository for the document "ST 2067-105" is named <code>st2067-105</code>
+
+          </p>
+        </section>    
       </section>
+      <section id="sec-repo-pub-doc">
+        <h3>HTML Publishing Document Repo</h3>
 
+        <section id="sec-repo-pub-doc-general">
+          <h4>General</h4>
+          <p>There is zero or one <i>private</i> HTML document repository for all editions and stages of a document.</p>
 
-      <section id="sec-external-links">
-        <h3>External links</h3>
+          <p>This repo is used to maintain the HTML source of a document, if one exists, and any additional elements that do not require their own repositories. The workflow for this document process is managed and documented at <a href="#bib-ag-26"></a>.</p>
 
-        <p>This links to
-        <a>https://www.iso.org/sites/directives/current/part2/index.xhtml</a>.</p>
+          <p><a>Issues</a> may not be collected in this repo, and the GitHub issue tracker is disabled as such. Editors should always be aware of issues in the Main Document Repo, which may come from the public.</p>
 
-      </section>
+          <p>Currently, these repos will always remain <i>private</i>.</p>
 
-      <section id="sec-dfn-element">
-        <h3>Inline terms</h3>
+        </section>
+        <section id="sec-repo-pub-doc-naming">
+          <h4>Naming</h4>
 
-        <p>A <dfn data-lt="alternate1|alternate2">term</dfn> can be defined and
-        then referenced as <a>term</a> or <a>alternate1</a> or
-        <a>alternate2</a></p>
+          <p>The syntax for repo naming is:</p>
 
-      </section>
+<pre>
+("rp" | "st" | "eg")&lt;document root number&gt; "-" &lt;document part&gt; "-private"
+</pre>
 
-      <section id="sec-dl-element">
-        <h3>Lists of key-value pairs</h3>
-        <dl>
-          <dt>key1<dt>
-          <dd>value1</dd>
-          <dt>key2</dt>
-          <dd>value2</dd>
-        </dl>
-      </section>
-
-      <section id="sec-figure-element">
-        <h3>Figure</h3>
-
-        <figure id="figure-sample-image">
-          <img class="figure" src="media/sample.png">
-          <figcaption>Example of a figure</figcaption>
-        </figure>
-
-        <p>This references <a href="#figure-sample-image"></a>.</p>
-
-      </section>
-
-      <section id="sec-table-element">
-        <h3>Table</h3>
-
-        <table id="tab-sample-tabledata">
-          <caption>Sample Table</caption>
-          <thead>
-            <tr>
-              <th>Sample Number</th>
-              <th>Sample Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0001</td>
-              <td>Name 01</td>
-            </tr>
-            <tr>
-              <td>0002</td>
-              <td>Name 02</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>This references <a href="#tab-sample-tabledata"></a>.</p>
-
-      </section>
-
-      <section id="sec-snippets-element">
-        <h3>External code snippets</h3>
-
-        <pre data-include="snippets/example.txt"></pre>
-      </section>
-
-      <section id="sec-code-element">
-        <h3>Internal code snippets</h3>
-
-  <pre>
-  &lt;pre&gt;
-  SCHEMAID = %s"https://www.smpte-ra.org/json-schema/" PUBNUM "/" REVISION [ "/" SHORTNAME]
-  SHORTNAME = 1*4("/" 1*(ALPHA / DIGIT / "-" / "_" / ".") )
-  PUBNUM = 1*(DIGIT) ["-" 1*(DIGIT)]
-  REVISION = STABLEREV
-  STABLEREV = 4(DIGIT) [2(DIGIT)]
-  &lt;pre&gt;
-  </pre>
-      </section>
-
-      <section id="sec-note-class">
-        <h3>Note</h3>
-
-        <p class="note">This is a note.</p>
-
-      </section>
-
-      <section id="sec-example-class">
-        <h3>Example</h3>
-
-        <div class="example">This is an example.</div>
-
-      </section>
-
-      <section id="sec-blockquote">
-        <h3>Quotes and blockquotes</h3>
-
-
-        <blockquote>This is a block quote.</blockquote>
-
-        <p>This is a <q>quote</q>.</p>
+          <p class="example">The repository for the HTML workflow of the document "ST 2067-105" is named <code>st2067-105-private</code>
+        </section>
       </section>
 
     </section>
 
+    <section id="sec-user-access">
+      <h2>User access</h2>
+      <section id="sec-gh-teams">
+        <h3>GitHub Teams</h3>
+        <p>Users shall be set into varios GitHub Teams based on need, such as:</p>
+        <ul>
+          <li>One team per TC</li>
+          <li>One team for ST</li>
+          <li>One team per TC chair team</li>
+        </ul>
+
+      </section>
+
+      <section id="sec-gh-perms">
+        <h3>GitHub Permissions</h3>
+        <p>Users and Teams shall have the permissions:</p>
+        <ul>
+          <li>Parent TC team -> <code>read</code></li>
+          <li>Parent TC chairs team -> <code>admin</code></li>
+          <li>Project group chairs/editors (as contributors) -> <code>maintain</code></li>
+        </ul>
+
+      </section>
+    </section>
+
+    <section id="sec-gh-workflow">
+      <h2>GitHub workflow      </h2>
+      <p>Project groups should adhere to the following rules:</p>
+
+      <ul>
+        <li>one or more editors are responsible for making modifications to the repo;</li>
+        <li>every substantial modification should be done through a <a>pull request</a>;</li>
+        <li>a <a>pull request</a> should require at least one <a>approval</a> from a project group member before being merged;
+        </li>
+        <li>a <a>pull request</a> should only be merged with the consensus of the project group, which can be obtained using the following methods:
+          <ol type="i">
+            <li>offering the <a>pull request</a> for a review period and the review period resulting in no substantial objections (a review period of 2 weeks is recommended);</li>
+            <li>seeking explicit project group consensus, e.g. during a meeting or via email;</li>
+            <li>granting the editor(s) to make modifications without explicit project group consensus, e.g. early in the development of the document.</li>
+          </ol>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="sec-boilerplate">
+      <h2>Boilerplate artifacts      </h2>
+      <p>The following documents shall present in all repositories, as modified according to the nature of repository:
+      </p>
+
+      <ul>
+        <li><a href="#element-a"></a>;</li>
+        <li><a href="#element-b"></a>;</li>
+        <li><a href="#element-c"></a>;</li>
+        <li><a href="#element-d"></a>;</li>
+        <li><a href="#element-e"></a>.</li>
+      </ul>
+      <p>See also <a href="#bib-smpte-ag-22"></a> for additional requirements specific to Public Committee Drafts.</p>
+    </section>
+
+
     <section id="sec-elements">
       <ol>
-        <li><a id="element-a" title="Sample text element" href="elements/sample.txt"></a></li>
+        <li>
+          <a id="element-a" title="README.md" href="elements/README.md"></a></li>
+        <li>
+          <a id="element-b" title="CONFIDENTIALITY.md" href="elements/CONFIDENTIALITY.md"></a></li>
+        <li>
+          <a id="element-c" title="CONTRIBUTING.md" href="elements/CONTRIBUTING.md"></a></li>
+        <li>
+          <a id="element-d" title="LICENSE.md" href="elements/LICENSE.md"></a></li>
+        <li>
+          <a id="element-e" title="PATENTS.md" href="elements/PATENTS.md"></a></li>
       </ol>
     </section>
 
     <section id="sec-bibliography">
       <ul>
-        <li><cite id="bib-iso-directives-part2">ISO/IEC Directives, Part 2</cite>, Principles and rules for the structure and drafting
-        of ISO and IEC documents (Ninth edition, 2021).
-        <a>https://www.iso.org/sites/directives/current/part2/index.xhtml</a></li>
-      </ul>
+          <li><cite id="bib-smpte-ag-22">SMPTE AG-22</cite>, Public Committee Draft (Public CD) Process 
+            <a>https://doc.smpte-doc.org/ag-22/main/</a></li>
+          </ul>
     </section>
 
   </body>
