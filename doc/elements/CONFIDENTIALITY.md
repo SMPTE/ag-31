@@ -1,3 +1,5 @@
+# CONFIDENTIALITY
+
 {{#if the repository is public}}
 
 This repository is not SMPTE Confidential Information and is not subject to the

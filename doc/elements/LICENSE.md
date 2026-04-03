@@ -1,5 +1,8 @@
+# LICENSE
+
 {{#if the repository is for a non-prose element that is intended to be made
   publicly available, including source code, XML, JSON, etc.}}
+
 
 Copyright (c), Society of Motion Pictures and Television Engineers. All rights
 reserved.
@@ -31,9 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 {{else}}
 
-Copyright © by the Society of Motion Picture and Television Engineers. All
-rights reserved. No part of this material may be reproduced, by any means
-whatsoever, without the prior written permission of the Society of Motion
-Picture and Television Engineers.
+Copyright © by the Society of Motion Picture and Television Engineers. All rights reserved. No part of this material may be
+reproduced, by any means whatsoever, without the prior written permission of the Society of Motion Picture and Television Engineers.
 
 {{/if}}

@@ -1,3 +1,5 @@
+# CONTRIBUTING
+
 Please be aware that all contributions to this material are being conducted in
 accordance with the SMPTE Standards Operations Manual, which is accessible on
 the SMPTE website with the Society Bylaws:
